@@ -7,17 +7,13 @@ import Quiz from "./components/Quiz";
 import Results from "./components/Results";
 
 class App extends React.Component {
-  constructor() {
-    super();
-    this.state = {};
-  }
   render() {
     return (
       <StyledApp className="App">
         <Switch>
-          <Route path="/"><Splash /></Route>
-          <Route path="/quiz"><Quiz /></Route>
-          <Route path="/results"><Results /></Route>
+          <Route path="/quiz" component={Quiz} />
+          <Route path="/results" component={Results} />
+          <Route path="/" component={Splash} />
         </Switch>
       </StyledApp>
     );
